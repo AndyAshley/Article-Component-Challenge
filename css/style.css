@@ -1,0 +1,210 @@
+:root {
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --desaturated-blue: hsl(214, 17%, 51%);
+  --grayish-blue: hsl(212, 23%, 69%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Manrope", sans-serif;
+  font-size: 13px;
+  background: var(--light-grayish-blue);
+}
+
+.bg-blue {
+  background: var(--dark-grayish-blue) !important;
+}
+
+.article-card {
+  background: white;
+  border-radius: 10px;
+}
+
+.header-bg {
+  background-image: url("../images/drawers.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -18px;
+  height: 200px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 0px;
+}
+
+.text-wrapper h1 {
+  font-size: 16px;
+  color: var(--dark-grayish-blue);
+}
+
+.text-wrapper p {
+  color: var(--desaturated-blue);
+  font-size: 13.1px;
+}
+
+.footer {
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.footer-share {
+  display: none;
+  color: var(--grayish-blue);
+  overflow: hidden;
+}
+
+.footer-share span {
+  letter-spacing: 0.5em;
+  font-size: 12px;
+  margin-right: 0.5em;
+}
+
+.footer-share img {
+  margin: 0em 0.5em;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+}
+
+.button-container {
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+button {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  position: relative;
+  background: var(--light-grayish-blue);
+  transition: all 0.1s linear;
+}
+
+button path {
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  top: 20px;
+  left: 0px;
+  fill: var(--dark-grayish-blue);
+}
+
+button.active {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  position: relative;
+  background: var(--desaturated-blue);
+}
+
+button path.active {
+  position: absolute;
+  width: 15px;
+  height: 13px;
+  top: 20px;
+  left: 0px;
+  fill: var(--light-grayish-blue);
+}
+
+button:hover {
+  transform: scale(1.2);
+}
+
+.not-active {
+  display: none !important;
+}
+
+.active {
+  display: block;
+}
+
+.footer-text p {
+  color: var(--dark-grayish-blue);
+  min-width: 150px;
+}
+
+.footer-text span {
+  color: var(--grayish-blue);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;
+  }
+
+  .header-bg {
+    background-image: url("../images/drawers.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+    height: 275px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  .footer {
+    overflow: visible;
+  }
+
+  .footer-share.active {
+    position: absolute;
+    top: -70px;
+    left: 200px;
+    width: 250px;
+    padding: 1rem 2rem;
+    display: block;
+    border-radius: 15px;
+    background-color: var(--dark-grayish-blue);
+  }
+
+  .share-square {
+    display: none;
+  }
+
+  .share-square.active {
+    display: block;
+    position: absolute;
+    top: -42px;
+    left: 7px;
+    height: 14px;
+    width: 14px;
+    transform: rotate(45deg);
+    background: var(--dark-grayish-blue);
+    z-index: 9999;
+  }
+
+  button:hover {
+    transform: scale(1);
+  }
+}
